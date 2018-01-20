@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 修改视口 -->
+	<meta name="viewport" content="width=device-width">
+	<title>weather</title>
+	<link rel="stylesheet" href="css/index.css">
+  <!-- 添加logo -->
+  <link rel="shortcut icon" href="img/logo.png">
+	<!-- 引入rem.js -->
+	<script src="js/rem.js"></script>
+  <script src="font/iconfont.js"></script>
+  <script src="js/jquery3.2.1.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<style type="text/css">
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+</style>
+<body>
+    <!-- 屏幕开始 -->
+	<div class="screen">
+  		<div class="header"></div>
+  		<div class="box">
+    			<h2>空气</h2>
+    			<h3></h3>
+  		</div>
+  		<div class="temperature"></div>
+  		<div class="weather"></div>
+  		<div class="wind_direction"></div>
+  		<div class="tishi">天冷了，注意保暖哦！</div>
+	</div>
+	<!-- 屏幕结束 -->
+  <!-- 今日明日天气 -->
+  <div class="con1">
+    <div class="content">
+      <div class="top">
+        <span class="day">今天</span>
+        <div class="temperature">
+          <span class="high" id="dat_high_temperature"></span>/<span class="low" id="dat_low_temperature"></span>°C
+        </div>
+      </div>
+      <div class="bottom">
+        <span class="weather1"></span>
+        <div class="pic" id="dat_weather_icon_id"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="top">
+        <span class="day">明天</span>
+        <div class="temperature">
+          <span class="high" id="tomorrow_high_temperature"></span>/<span class="low" id="tomorrow_low_temperature"></span>°C
+        </div>
+      </div>
+      <div class="bottom">
+        <span class="weather1" id="tomorrow_condition" ></span>
+        <div class="pic" id="tomorrow_weather_icon_id"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 实时天气 -->
+  <div class="con2">
+    <div class="wrap" id="now">
+      <!-- <div class="now" >
+         <h2 class="now_time">12:00</h2>
+        <div class="now_icon"></div>
+        <h3 class="now_temperature">-1°</h3> 
+      </div> -->    
+    </div>
+  </div>
+  <!-- 未来几天天气-->
+  <div class="con3">
+    <div class="wrap" id="forecast_list">
+      <!-- <div class="recent">
+        <div class="data">
+          <span class="month">01</span>/<span class="day">15</span>
+        </div>
+        <h2 class="condtion">多云</h2>
+        <div class="weather_icon_id"></div>
+        <h3 class="high_temperature">2°</h3>
+        <h4 class="low_temperature">-13°</h4>
+        <h5 class="wind_direction">西北风</h5>
+        <h6 class="wind_level">2级</h6>
+      </div> -->
+    </div>
+  </div>
+  <div class="city_box" style="display:none;">
+    <div class="sousuo_box">
+      <div class="search_box">
+        <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-sousuo"></use>
+        </svg>
+        <input type="text" placeholder="搜索市天气" class="text">
+       </div>
+     <div class="button">取消</div>
+    </div>
+    <!-- 城市 -->
+    <div class="cities" id="city">
+      <h1 class="title">热门城市</h1>
+      <div class="con">
+        <div class="son">北京</div>
+        <div class="son">太原</div>
+        <div class="son">上海</div>
+        <div class="son">重庆</div>
+        <div class="son">天津</div>
+        <div class="son">杭州</div>
+        <div class="son">石家庄</div>
+        <div class="son">黑龙江</div>
+        <div class="son">拉萨</div>
+        <div class="son">西安</div>
+        <div class="son">安徽</div>
+        <div class="son">南京</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!-- 移动端布局步骤：
+  1，修改视口
+  2，引入rem.js
+  3，修改设计稿的宽度 -->
+<!-- 
+  1，html超文本标记语言
+  2，css 层叠样式表
+  3，div+css布局
+  4，如何将html与css关联
+  5，如何将js引入到页面
+  6, 标签：页面中用尖括号括起来的叫做标签
+      单标签，双标签
+  7，css语法
+      选择器{
+	     属性：属性值；
+      } 
+  8，class="box"    .box
+       类名选择器
+       标签名
+       标签选择器
+       父元素（空格）子元素
+       .screen .box h3
+       后代选择器
+  9，选择器的作用：
+      选中页面中的元素
+  10，浮动、定位、字体、盒子模型（margin、padding) -->
+  <!-- 后代选择器、伪类选择器 
+       ：nth-child(n) 选中第n个孩子
+       ：first-child  选中第一个孩子
+       ：last-child   选中最后一个孩子-->
